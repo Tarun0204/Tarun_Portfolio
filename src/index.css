@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body {
+  cursor: none;
+}
+
+/* Hide default cursor everywhere */
+* {
+  cursor: none !important;
+}
