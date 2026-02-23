@@ -3,13 +3,16 @@ import { useEffect, useState } from "react";
 export default function Cursor() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [ringPos, setRingPos] = useState({ x: 0, y: 0 });
+  const [isDesktop, setIsDesktop] = useState(true);
 
   useEffect(() => {
-    if ("ontouchstart" in window) return;
+    if ("ontouchstart" in window) {
+      setIsDesktop(false);
+      return;
+    }
 
     const moveCursor = (e) => {
       setPos({ x: e.clientX, y: e.clientY });
-
 
       setRingPos((prev) => ({
         x: prev.x + (e.clientX - prev.x) * 0.15,
@@ -20,6 +23,8 @@ export default function Cursor() {
     window.addEventListener("mousemove", moveCursor);
     return () => window.removeEventListener("mousemove", moveCursor);
   }, []);
+
+  if (!isDesktop) return null;
 
   return (
     <>
