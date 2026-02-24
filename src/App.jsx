@@ -1,5 +1,5 @@
 import './App.css'
-import Cursor from './Components/Cursor'
+import Cursor from './utils/Cursor'
 import Header from "./utils/Header";
 import DarkMode from "./utils/DarkMode";
 

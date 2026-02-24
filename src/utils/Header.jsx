@@ -41,7 +41,7 @@ export default function Header() {
     <header className="fixed top-4 left-0 w-full z-50">
       <div
         ref={headerRef}
-        className="mx-auto max-w-[92%] md:max-w-5xl 
+        className="mx-auto max-w-[92%] md:max-w-5xl lg:max-w-6xl
         backdrop-blur-xl bg-white/70 dark:bg-gray-900/80
         border border-white/30 dark:border-gray-700/40
         rounded-2xl shadow-lg transition-all duration-300"
@@ -100,7 +100,7 @@ export default function Header() {
                 offset={-80}
                 duration={500}
                 onClick={() => setOpen(false)}
-                className="block cursor-pointer text-gray-700 dark:text-gray-300 font-medium hover:text-[#00728F] dark:hover:text-yellow-400"
+                className="block mt-3 cursor-pointer text-gray-700 dark:text-gray-300 font-medium hover:text-[#00728F] dark:hover:text-yellow-400"
               >
                 {item.title}
               </Link>
