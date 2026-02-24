@@ -29,14 +29,14 @@ export default function Cursor() {
   return (
     <>
       <div
-        className="fixed top-0 left-0 w-8 h-8 border-2 border-gray-500 rounded-full pointer-events-none z-[9998] transition-transform duration-150 ease-out"
+        className="fixed top-0 left-0 w-8 h-8 border-2 border-gray-500 rounded-full pointer-events-none z-[99999] transition-transform duration-150 ease-out"
         style={{
           transform: `translate(${ringPos.x - 16}px, ${ringPos.y - 16}px)`,
         }}
       />
 
       <div
-        className="fixed top-0 left-0 w-4 h-4 bg-red-500 rounded-full pointer-events-none z-[9999]"
+        className="fixed top-0 left-0 w-4 h-4 bg-red-500 rounded-full pointer-events-none z-[100000]"
         style={{
           transform: `translate(${pos.x - 6}px, ${pos.y - 6}px)`,
         }}

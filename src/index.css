@@ -1,10 +1,31 @@
 @import "tailwindcss";
 
-body {
-  cursor: none;
+html {
+  background-color: #ffffff;
+  color: #111827;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hide default cursor everywhere */
+html.dark {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+body {
+  min-height: 100vh;
+  cursor: none;
+  background-color: inherit;
+  color: inherit;
+}
+
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
 * {
   cursor: none !important;
 }
